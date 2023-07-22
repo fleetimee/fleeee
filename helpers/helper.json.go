@@ -3,9 +3,8 @@ package helpers
 import (
 	"encoding/json"
 
+	"github.com/fleetimee/flee/schemes"
 	"github.com/sirupsen/logrus"
-
-	"github.com/restuwahyu13/golang-pos/schemas"
 )
 
 func Strigify(payload interface{}) []byte {
@@ -13,8 +12,8 @@ func Strigify(payload interface{}) []byte {
 	return response
 }
 
-func Parse(payload []byte) schemas.SchemaResponses {
-	var jsonResponse schemas.SchemaResponses
+func Parse(payload []byte) schemes.SchemeResponses {
+	var jsonResponse schemes.SchemeResponses
 	err := json.Unmarshal(payload, &jsonResponse)
 
 	if err != nil {

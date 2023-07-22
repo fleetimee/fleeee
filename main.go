@@ -9,9 +9,9 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 
-	"github.com/restuwahyu13/golang-pos/models"
-	"github.com/restuwahyu13/golang-pos/pkg"
-	"github.com/restuwahyu13/golang-pos/routes"
+	"github.com/fleetimee/flee/models"
+	"github.com/fleetimee/flee/pkg"
+	"github.com/fleetimee/flee/routes"
 )
 
 func main() {
@@ -39,6 +39,7 @@ func main() {
 	routes.NewRouteSupplier(db, app)
 	routes.NewRouteTransaction(db, app)
 	routes.NewRouteUser(db, app)
+	routes.NewRouteContact(db, app)
 
 	/**
 	* ========================
@@ -79,6 +80,7 @@ func setupDatabase() *gorm.DB {
 		&models.ModelSupplier{},
 		&models.ModelTransaction{},
 		&models.ModelUser{},
+		&models.ModelContact{},
 	)
 
 	if err != nil {

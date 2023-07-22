@@ -6,7 +6,7 @@ import (
 	"github.com/golang-jwt/jwt"
 	"github.com/sirupsen/logrus"
 
-	"github.com/restuwahyu13/golang-pos/schemes"
+	"github.com/fleetimee/flee/schemes"
 )
 
 func Sign(configs *schemes.JWtMetaRequest) (string, error) {

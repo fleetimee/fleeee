@@ -1,4 +1,4 @@
-module github.com/restuwahyu13/golang-pos
+module github.com/fleetimee/flee
 
 go 1.17
 

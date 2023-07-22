@@ -7,8 +7,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 
-	"github.com/restuwahyu13/golang-pos/helpers"
-	"github.com/restuwahyu13/golang-pos/pkg"
+	"github.com/fleetimee/flee/helpers"
+	"github.com/fleetimee/flee/pkg"
 )
 
 func AuthRole(roles map[string]bool) gin.HandlerFunc {

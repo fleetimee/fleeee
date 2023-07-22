@@ -5,7 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/restuwahyu13/golang-pos/schemes"
+	"github.com/fleetimee/flee/schemes"
 )
 
 func APIResponse(ctx *gin.Context, Message string, StatusCode int, Data interface{}) {

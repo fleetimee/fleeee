@@ -1,8 +1,8 @@
 package entities
 
 import (
-	"github.com/restuwahyu13/golang-pos/models"
-	"github.com/restuwahyu13/golang-pos/schemes"
+	"github.com/fleetimee/flee/models"
+	"github.com/fleetimee/flee/schemes"
 )
 
 type EntityTransaction interface {

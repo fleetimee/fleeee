@@ -9,10 +9,10 @@ import (
 	"github.com/gin-gonic/gin"
 	gpc "github.com/restuwahyu13/go-playground-converter"
 
-	"github.com/restuwahyu13/golang-pos/entities"
-	"github.com/restuwahyu13/golang-pos/helpers"
-	"github.com/restuwahyu13/golang-pos/pkg"
-	"github.com/restuwahyu13/golang-pos/schemes"
+	"github.com/fleetimee/flee/entities"
+	"github.com/fleetimee/flee/helpers"
+	"github.com/fleetimee/flee/pkg"
+	"github.com/fleetimee/flee/schemes"
 )
 
 type handleProduct struct {

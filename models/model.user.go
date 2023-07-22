@@ -6,7 +6,7 @@ import (
 	"github.com/google/uuid"
 	"gorm.io/gorm"
 
-	"github.com/restuwahyu13/golang-pos/pkg"
+	"github.com/fleetimee/flee/pkg"
 )
 
 type ModelUser struct {

@@ -6,8 +6,8 @@ import (
 
 	"gorm.io/gorm"
 
-	models "github.com/restuwahyu13/golang-pos/models"
-	"github.com/restuwahyu13/golang-pos/schemes"
+	models "github.com/fleetimee/flee/models"
+	"github.com/fleetimee/flee/schemes"
 )
 
 type repositoryCustomer struct {

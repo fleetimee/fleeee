@@ -1,0 +1,54 @@
+[
+  {
+    "_id": "ec3cd72f-c361-43a5-bb0b-c641971219e7",
+    "colId": "1f9833fe-8982-4e03-80a5-e61d8931e0ef",
+    "containerId": "",
+    "name": "Ping",
+    "url": "localhost:8080/api/v1/contact/ping",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-07-21T23:45:14.005Z",
+    "modified": "2023-07-21T23:46:34.397Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "3c5c70e1-0e83-4a52-b4cb-ad67ed36de75",
+    "colId": "1f9833fe-8982-4e03-80a5-e61d8931e0ef",
+    "containerId": "",
+    "name": "Create New Contact",
+    "url": "localhost:8080/api/v1/contact/create",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-07-21T23:46:48.206Z",
+    "modified": "2023-07-21T23:54:54.138Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"Realname\": \"A\",\n  \"Whatsapp\": \"7777\",\n  \"Email\": \"yanto@gmail.com\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "3e355ff2-ac3c-440b-9778-bb5cf43799ed",
+    "colId": "1f9833fe-8982-4e03-80a5-e61d8931e0ef",
+    "containerId": "009a6a66-4ccd-4b30-a93a-92492ea8cb0b",
+    "name": "Register",
+    "url": "localhost:8080/api/v1/auth/register",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-07-21T23:58:23.447Z",
+    "modified": "2023-07-22T00:02:15.439Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"first_name\": \"novian\",  \n  \"last_name\": \"andika\",\n  \"email\": \"zane.227@gmail.com\",\n  \"password\": \"12345678\",\n  \"role\": \"admin\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]

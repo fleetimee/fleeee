@@ -7,10 +7,10 @@ import (
 	"github.com/gin-gonic/gin"
 	gpc "github.com/restuwahyu13/go-playground-converter"
 
-	"github.com/restuwahyu13/golang-pos/entities"
-	"github.com/restuwahyu13/golang-pos/helpers"
-	"github.com/restuwahyu13/golang-pos/pkg"
-	"github.com/restuwahyu13/golang-pos/schemes"
+	"github.com/fleetimee/flee/entities"
+	"github.com/fleetimee/flee/helpers"
+	"github.com/fleetimee/flee/pkg"
+	"github.com/fleetimee/flee/schemes"
 )
 
 type handleCustomer struct {
@@ -106,7 +106,12 @@ func (h *handleCustomer) HandlerResult(ctx *gin.Context) {
 	res, error := h.customer.EntityResult(&body)
 
 	if error.Type == "error_result_01" {
-		helpers.APIResponse(ctx, fmt.Sprintf("Customer data not found for this id %s ", id), error.Code, nil)
+		helpers.APIResponse(
+			ctx,
+			fmt.Sprintf("Customer data not found for this id %s ", id),
+			error.Code,
+			nil,
+		)
 		return
 	}
 
@@ -134,16 +139,31 @@ func (h *handleCustomer) HandlerDelete(ctx *gin.Context) {
 	res, error := h.customer.EntityDelete(&body)
 
 	if error.Type == "error_delete_01" {
-		helpers.APIResponse(ctx, fmt.Sprintf("Customer data not found for this id %s ", id), error.Code, nil)
+		helpers.APIResponse(
+			ctx,
+			fmt.Sprintf("Customer data not found for this id %s ", id),
+			error.Code,
+			nil,
+		)
 		return
 	}
 
 	if error.Type == "error_delete_02" {
-		helpers.APIResponse(ctx, fmt.Sprintf("Delete Customer data for this id %v failed", id), error.Code, nil)
+		helpers.APIResponse(
+			ctx,
+			fmt.Sprintf("Delete Customer data for this id %v failed", id),
+			error.Code,
+			nil,
+		)
 		return
 	}
 
-	helpers.APIResponse(ctx, fmt.Sprintf("Delete Customer data for this id %s success", id), http.StatusOK, res)
+	helpers.APIResponse(
+		ctx,
+		fmt.Sprintf("Delete Customer data for this id %s success", id),
+		http.StatusOK,
+		res,
+	)
 }
 
 /**
@@ -174,16 +194,31 @@ func (h *handleCustomer) HandlerUpdate(ctx *gin.Context) {
 	_, error := h.customer.EntityUpdate(&body)
 
 	if error.Type == "error_update_01" {
-		helpers.APIResponse(ctx, fmt.Sprintf("Customer data not found for this id %s ", id), error.Code, nil)
+		helpers.APIResponse(
+			ctx,
+			fmt.Sprintf("Customer data not found for this id %s ", id),
+			error.Code,
+			nil,
+		)
 		return
 	}
 
 	if error.Type == "error_update_02" {
-		helpers.APIResponse(ctx, fmt.Sprintf("Update Customer data failed for this id %s", id), error.Code, nil)
+		helpers.APIResponse(
+			ctx,
+			fmt.Sprintf("Update Customer data failed for this id %s", id),
+			error.Code,
+			nil,
+		)
 		return
 	}
 
-	helpers.APIResponse(ctx, fmt.Sprintf("Update Customer data success for this id %s", id), http.StatusCreated, nil)
+	helpers.APIResponse(
+		ctx,
+		fmt.Sprintf("Update Customer data success for this id %s", id),
+		http.StatusCreated,
+		nil,
+	)
 }
 
 /**
@@ -192,7 +227,11 @@ func (h *handleCustomer) HandlerUpdate(ctx *gin.Context) {
 *=======================================
  */
 
-func ValidatorCustomer(ctx *gin.Context, input schemes.SchemeCustomer, Type string) (interface{}, int) {
+func ValidatorCustomer(
+	ctx *gin.Context,
+	input schemes.SchemeCustomer,
+	Type string,
+) (interface{}, int) {
 	var schema gpc.ErrorConfig
 
 	if Type == "create" {
